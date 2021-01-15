@@ -1,18 +1,63 @@
-GridLayoutExample:
+PageLayoutExample:
+
+
+<PageLayoutExample@PageLayout>
+    MainWidget:
+    BoxLayoutExample:
+    AnchorLayoutExample:
+    GridLayoutExample:
+    
+
+
+<ScrollViewExample@ScrollView>
+    StackLayoutExample:
+        size_hint: 1, None
+        height: self.minimum_height
+
+
+<StackLayoutExample>:
+    # Button:
+    #     text: 'A'
+    #     size_hint: .2, .2
+    # Button:
+    #     text: 'B'
+    #     size_hint: .2, .2
+    # Button:
+    #     text: 'C'
+    #     size_hint: .2, .2
+    # Button:
+    #     text: 'D'
+    #     size_hint: .2, .2
+    # Button:
+    #     text: 'E'
+    #     size_hint: .2, .2
+    # Button:
+    #     text: 'F'
+    #     size_hint: .2, .2
+
+    # left-right or top-bottom
+    # orientation: 'rl-tb'
+    # padding: ('20dp', '20dp', '20dp', '20dp')
+    # spacing: '20dp', '20dp'
+
 
 
 <GridLayoutExample@GridLayout>:
     # rows
     # col
-    cols: 3
+    # cols: 3
+    rows: 2
     Button:
         text: 'A'
-    Button:
-        text: 'b'
+        size_hint: None, 1
+        width: '60dp'
+    BoxLayoutExample:
     Button:
         text: 'c'
     Button:
         text: 'D'
+        size_hint: None, 1
+        width: '60dp'
     Button:
         text: 'E'
     Button:
@@ -31,6 +76,7 @@ GridLayoutExample:
             text: 'A'
         Button:
             text: 'B'
+
 
 
 <BoxLayoutExample>:
@@ -64,6 +110,7 @@ GridLayoutExample:
             text: 'B4'
     Label:
         text: 'C'
+
 
 
 <MainWidget>:
