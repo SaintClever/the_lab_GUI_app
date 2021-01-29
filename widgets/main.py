@@ -14,7 +14,8 @@ class WidgetsExample(GridLayout):
     counter = 1
     count_enabled = BooleanProperty(False)
     my_text = StringProperty('1')
-    slider_value_txt = '0'
+    # slider_value_txt = StringProperty('value')
+    text_input_str = StringProperty('foo')
 
     def on_button_click(self):
         # print('Button clicked')
@@ -27,10 +28,14 @@ class WidgetsExample(GridLayout):
         print('switch: ' + str(widget.active))
 
 
-    def on_slider_value(self, widget):
-        print('slider: ' + str(int(widget.value)))
-        
-        self.slider_value_txt = str(int(widget.value))
+    # def on_slider_value(self, widget):
+        # print('slider: ' + str(int(widget.value)))
+        # self.slider_value_txt = str(int(widget.value))
+
+
+    def on_text_validate(self, widget):
+        self.text_input_str = widget.text
+
 
 
     def on_toggle_button_state(self, widget): # the widget we're getting is the toggle_button from thelab.kv
